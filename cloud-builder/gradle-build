@@ -1,5 +1,7 @@
 #!/bin/sh
-unzip -o -q cache.zip 
+# this is a wrapper scripts that sets up the gradle cache and zips it after execution so that it can
+# be easily transfered to cloud storage with gsutil
+unzip -o -q cache.zip
 ./gradlew $@
 status=$?
 zip -qr cache.zip .gradle

@@ -1,3 +1,4 @@
+# we use a gcr.io image and not openjdk:8-jdk-slim because it loads faster in Google Cloud
 FROM gcr.io/cloud-builders/javac
 
 # Install Dependencies
@@ -7,6 +8,7 @@ RUN apt-get update \
 
 ENV ANDROID_HOME /opt/android-sdk-linux
 
+# Install the wrapper script
 COPY gradle-build /bin/
 
 # Download Android SDK tools
