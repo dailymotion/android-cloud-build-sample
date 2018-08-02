@@ -1,7 +1,7 @@
 steps:
 - name: gcr.io/cloud-builders/gsutil
   args: ['cp', 'gs://gradle_cache_$PROJECT_ID/cache.zip', 'cache.zip']
-- name: 'gcr.io/sixth-starlight-858/android-builder'
+- name: 'gcr.io/$PROJECT_I/android-builder'
   entrypoint: 'gradle-build'
   args: ['-g', '.gradle', 'assemble']
 - name: gcr.io/cloud-builders/gsutil
