@@ -1,4 +1,4 @@
-# we use a gcr.io image and not openjdk:8-jdk-slim because it loads faster in Google Cloud
+# we use a gcr.io image and not openjdk:8-jdk-slim because it loads faster in the google Google Cloud Build environment
 FROM gcr.io/cloud-builders/javac
 
 # Install Dependencies
